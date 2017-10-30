@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Input from './input';
 
 class Text extends Component {
     constructor(props) {
@@ -17,9 +16,10 @@ class Text extends Component {
 
     render() {
         return (
-            <Input label={this.props.label} error={this.state.error}>
-                <input type={this.props.type} name={this.props.name} className="form-control" placeholder={this.props.placeholder} onChange={this.update} />
-            </Input>
+            <div className={this.state.error ? 'form-group has-error' : 'form-group'}>
+                <label className={this.props.attributes.label === '' ? 'sr-only' : ''}>{this.props.attributes.label}</label>
+                <input className="form-control" {...this.props.attributes} onChange={this.update} />
+            </div>
         )
     }
 }

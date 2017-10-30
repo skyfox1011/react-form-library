@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Menu from './menu';
-import Login from './login';
+import Login from '../form/login';
 
 class Home extends Component {
     render() {
@@ -14,7 +14,7 @@ class Home extends Component {
 
                     </aside>
                     <section className="col-sm-4">
-                        <Login />
+                        <Login type="form-horizontal" />
                     </section>
                     <aside className="col-sm-4">
 

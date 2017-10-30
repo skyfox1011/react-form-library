@@ -11,9 +11,18 @@ To view my work:
 10) This is mainly about the code of the project moreso than the product. Just showing example how a web form can be coded into a library in react
 
 To start viewing the code structure:
-1) Look at index.js at the root
-2) index.js renders Home component in /dev/main/home.js
-3) home.js renders two components: Menu in /dev/main/menu.js and Login in /dev/main/login.js
-4) menu.js can be ignored since it's not part of the scope
-5) login.js is the important one to look at to view the modularity of the form library.
-6) login.js uses the from library from /dev/form/form.js -> text.js -> input.js
+1) All the code is developed /src/dev
+2) /main is only for web section
+3) Only the type of forms should be at the root of /form and should be accessed by /main components
+4) /form/library are the form parts and should be used only by form types at the root of /main
+
+Key features:
+- Easy to use login form
+- Email validation check
+- Required field check for both inputs
+- Two different login views. One on nav and one on the body
+- Submit button disables accordingly to the specs
+
+Future things:
+- Add checkbox input for library parts
+- Add disable/enable toggling feature for inputs (input dependancies)

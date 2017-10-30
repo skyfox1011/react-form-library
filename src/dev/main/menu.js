@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Login from '../form/login';
 
 class Menu extends Component {
     render() {
@@ -8,6 +9,7 @@ class Menu extends Component {
                     <div className="navbar-header">
                         <a href="" className="navbar-brand">My React Form Library</a>
                     </div>
+                    <Login type="form-inline" />
                     <div id="navbar-main" className="navbar-collapse collapse" aria-expanded="true">
                     </div>
                 </div>
